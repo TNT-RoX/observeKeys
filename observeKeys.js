@@ -1,3 +1,6 @@
+function XOR(a, b) {
+	return (a || b ) && !(a && b );
+}
 Obect.prototype.observeKeys = function(prefix) {
 	prefix = prefix || '';
 	var obj = this;
