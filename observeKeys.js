@@ -1,5 +1,6 @@
-Obect.prototype.observeKeys = function(obj, prefix) {
+Obect.prototype.observeKeys = function(prefix) {
 	prefix = prefix || '';
+	var obj = this;
 	for (var key in obj) {
 		if (( typeof obj[key] != "function") && XOR(Object.prototype.toString.call(obj[key]) === '[object Array]', typeof obj[key] != "object")) {
 			obj.watch(key, function(p, was, now) {
