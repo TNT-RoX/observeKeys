@@ -1,4 +1,4 @@
-oobject.bserveKeys
+oobject.observeKeys
 ===========
 
 Trigger events from changes in object.
