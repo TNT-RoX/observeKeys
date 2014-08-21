@@ -1,10 +1,10 @@
-observeKeys
+Javascript observeKeys function
 ===========
 
 Trigger document events when object property changes.
 
 Event name is the dot path to the property.
-Very useful for statemachine pattern.
+Very useful for Event-driven finite-state machine pattern
 
 returns : 
 
