@@ -5,7 +5,7 @@ Triggers document level events when an objects properties change.
 
 Event name is the dot path to the property.
 
-**Very useful for Event-driven finite-state machine pattern**
+**Very useful for Event-driven finite-state machine pattern in SPA's**
 
 returns : 
 ```sh
