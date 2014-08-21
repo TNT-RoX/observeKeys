@@ -8,8 +8,8 @@ function observeKeys(a, c) {
 					now : d,
 					was : b
 				},
-				bubbles : !1,
-				cancelable : !0
+				bubbles : false,
+				cancelable : true
 			}));
 			return d;
 		}), a[b] instanceof Object && observeKeys(a[b], c + b + ".");
