@@ -1,4 +1,4 @@
-Obect.prototype.observeKeys = function(prefix) {
+Object.prototype.observeKeys = function(prefix) {
 	prefix = prefix || '';
 	var obj = this;
 	for (var key in obj) {
@@ -13,7 +13,7 @@ Obect.prototype.observeKeys = function(prefix) {
 					bubbles : false,
 					cancelable : true
 				};
-				document.dispatchEvent(new CustomEvent((prefix + prop, settings));
+				document.dispatchEvent(new CustomEvent(prefix + prop, settings));
 				return now;
 			});
 		}
