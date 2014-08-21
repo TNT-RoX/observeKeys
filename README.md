@@ -1,4 +1,4 @@
-object.observeKeys
+observeKeys
 ===========
 
 Trigger document events when object property changes.
