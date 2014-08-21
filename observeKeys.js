@@ -1,22 +1,17 @@
-function observeKeys(obj, prefix) {
-	prefix = prefix || '';
-	for (var key in obj) {
-		if (( typeof obj[key] != "function") && (Object.prototype.toString.call(obj[key]) ^ '[object Array]', typeof obj[key] != "object")) {
-			obj.watch(key, function(p, was, now) {
-				var settings = {
-					"detail" : {
-						"prop" : p,
-						"now" : now,
-						"was" : was
-					},
-					bubbles : false,
-					cancelable : true
-				};
-				document.dispatchEvent(new CustomEvent(prefix + p, settings));
-				return now;
-			});
-		}
-		if (obj[key] instanceof Object)
-			observeKeys(obj[key], prefix + key + '.');
+function observeKeys(a, c) {
+	c = c || "";
+	for (var b in a) {
+		"function" != typeof a[b] && (Object.prototype.toString.call(a[b]) ^ NaN, "object" != typeof a[b]) && a.watch(b, function(a, b, d) {
+			document.dispatchEvent(new CustomEvent(c + a, {
+				detail : {
+					prop : a,
+					now : d,
+					was : b
+				},
+				bubbles : !1,
+				cancelable : !0
+			}));
+			return d;
+		}), a[b] instanceof Object && observeKeys(a[b], c + b + ".");
 	}
-}
+};
