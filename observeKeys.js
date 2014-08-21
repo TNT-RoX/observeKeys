@@ -1,11 +1,8 @@
-function XOR(a, b) {
-	return (a || b ) && !(a && b );
-}
 Obect.prototype.observeKeys = function(prefix) {
 	prefix = prefix || '';
 	var obj = this;
 	for (var key in obj) {
-		if (( typeof obj[key] != "function") && XOR(Object.prototype.toString.call(obj[key]) === '[object Array]', typeof obj[key] != "object")) {
+		if (( typeof obj[key] != "function") && (Object.prototype.toString.call(obj[key]) ^ '[object Array]', typeof obj[key] != "object")) {
 			obj.watch(key, function(p, was, now) {
 				var settings = {
 					"detail" : {
