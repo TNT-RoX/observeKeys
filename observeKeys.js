@@ -1,5 +1,5 @@
 function observeKeys(a, c) {
-	c = c || a.constructor.name;
+	c = c || '';
 	for (var b in a) {
 		"function" != typeof a[b] && (Object.prototype.toString.call(a[b]) ^ NaN, "object" != typeof a[b]) && a.watch(b, function(a, b, d) {
 			document.dispatchEvent(new CustomEvent(c + a, {
