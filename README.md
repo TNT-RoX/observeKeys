@@ -1,4 +1,4 @@
-oobject.observeKeys
+object.observeKeys
 ===========
 
 Trigger events when object property changes.
